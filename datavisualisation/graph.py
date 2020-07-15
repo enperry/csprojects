@@ -4,7 +4,7 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 
-MY_FILE = "/Users/kuro/Desktop/school/cs projects/datavisualisation/sample_sfpd_incident_all.csv"
+MY_FILE = "/Users/kuro/Documents/GitHub/csprojects/datavisualisation/sample_sfpd_incident_all.csv"
 
 def parse(rawFile, delimiter):
     openedFile = open(rawFile)
@@ -34,3 +34,12 @@ def visualizeDays():
     ]
     dayTuple = tuple(["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])
     
+    plt.plot(dataList)
+    plt.xticks(range(len(dayTuple)), dayTuple)
+    plt.savefig("Days.png")
+    plt.clf()
+
+def main():
+    visualizeDays()
+
+main()

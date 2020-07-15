@@ -10,7 +10,7 @@ class constituency():
 		for i in self.candidate:
 			self.votesList.append(i.votes)
 
-	def recalculate(votePercent):
+	def recalculate(self, votePercent):
 		pass
 
 	def __str__(self):
