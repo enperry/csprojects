@@ -44,7 +44,7 @@ def visualizeType():
 
     counter = Counter(item["Category"] for item in dataFile)
     labels = tuple(counter.keys())
-    xLocations = na.array(range(len(labels))) + 0.5
+    xLocations = np.array(range(len(labels))) + 0.5
 
     width = 0.5
 
