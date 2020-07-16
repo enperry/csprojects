@@ -39,7 +39,24 @@ def visualizeDays():
     plt.savefig("Days.png")
     plt.clf()
 
+def visualizeType():
+    dataFile = parse(MY_FILE, ",")
+
+    counter = Counter(item["Category"] for item in dataFile)
+    labels = tuple(counter.keys())
+    xLocations = na.array(range(len(labels))) + 0.5
+
+    width = 0.5
+
+    plt.bar(xLocations, counter.values(), width = width)
+    plt.xticks(xLocations + width / 2, labels, rotation = 90)
+    plt.subplots_adjust(bottom = 0.4)
+    plt.rcParams["figure.figsize"] = 12, 8
+    plt.savefig("Type.png")
+    plt.clf()
+
 def main():
     visualizeDays()
+    visualizeType()
 
 main()
