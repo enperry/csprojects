@@ -1,6 +1,6 @@
 import csv
 
-MY_FILE = "/Users/kuro/Desktop/school/cs projects/datavisualisation/sample_sfpd_incident_all.csv"
+MY_FILE = "/Users/kuro/Documents/GitHub/csprojects/datavisualisation/sample_sfpd_incident_all.csv"
 
 def parse(rawFile, delimiter):
     openedFile = open(rawFile)
