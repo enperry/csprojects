@@ -22,3 +22,6 @@ class Board:
                 chanceNumber = randint(0, 2)
                 if(chanceNumber == 0):
                     col.setLive()
+
+    def checkNeighbors(self):
+        
