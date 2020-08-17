@@ -16,6 +16,6 @@ class Cell:
     
     def getPrintCharacter(self):
         if(self.isAlive == True):
-            return u"\u2588"
+            return "O"
         else:
             return " "
