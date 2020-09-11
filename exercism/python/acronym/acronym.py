@@ -1,8 +1,9 @@
+import re 
+
 def abbreviate(words):
-    words = words.split()
     acronym = ""
-
-    for i in words:
-        acronym = acronym + i[0]
-
-    return acronym.upper()
+    words = re.findall("[a-zA-Z']+", words.upper())
+    acronymTemp = [i[0] for i in words]
+    for i in acronymTemp:
+        acronym = acronym + i
+    return acronym

@@ -2,5 +2,5 @@ import re
 from collections import Counter
 
 def count_words(sentence):
-    sentence = re.sub(r"[!&@$%^&_]", " ", sentence)
-    return Counter(re.findall(r"\b[a-zA-Z0-9\"]+\b", sentence.lower()))
+    sentence = re.findall("[a-z]+'[a-z]|[a-z0-9]+", sentence.lower()) 
+    return Counter(sentence)

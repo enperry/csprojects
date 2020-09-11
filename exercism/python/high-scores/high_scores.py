@@ -10,3 +10,4 @@ def personal_top_three(scores):
     tempscores = scores
     tempscores.sort(reverse = True)
     return tempscores[:3]
+
