@@ -1,5 +1,2 @@
-def two_fer(name):
-    if(name == ""):
-        print("One for you, one for me.")
-    else:
-        print("One for " + name + ", one for me.")
+def two_fer(name = "you"):
+    return "One for " + name + ", one for me."

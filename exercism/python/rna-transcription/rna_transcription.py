@@ -1,14 +1,5 @@
 def to_rna(dna_strand):
-    for char in dna_strand:
-        if(char == "G"):
-            char = "C"
-        elif(char == "C"):
-            char = "G"
-        elif(char == "T"):
-            char = "A"
-        elif(char == "A"):
-            char = "U"
-        else:
-            char = " "
-
-    return dna_strand
+    transcriptionDict = {'G':'c', 'C':'g', 'T':'a', 'A':'u'}
+    for nucleotide in transcriptionDict:
+        dna_strand = dna_strand.replace(nucleotide, transcriptionDict[nucleotide])
+    return dna_strand.upper()

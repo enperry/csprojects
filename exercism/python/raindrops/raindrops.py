@@ -9,6 +9,6 @@ def convert(number):
         resultString = resultString + "Plong"
     
     if(resultString == ""):
-        return number
+        return str(number)
 
     return resultString
