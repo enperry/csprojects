@@ -8,7 +8,7 @@ class MeetupDayException(Exception):
     def __init__(self, message):
         print(message)
 
-def meetup(year: int, month: int, week: str, day_of_week: str) -> 'date':
+def meetup(year, month, week, day_of_week):
     monthDaysPerWeek = monthcalendar(year, month)
     dayIndex = getDayIndex.index(day_of_week)
     days = [week_days[dayIndex] for week_days in monthDaysPerWeek if week_days[dayIndex] > 0]
